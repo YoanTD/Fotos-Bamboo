@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" id="b9W-DD-Buc" userLabel="PicturesCell" customClass="PicturesCell" customModule="_1_Proyecto_GIT" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="272" height="164"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="G0k-qu-tIj">
+                <rect key="frame" x="0.0" y="0.0" width="272" height="164"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPn-pe-EMC">
+                        <rect key="frame" x="0.0" y="0.0" width="272" height="164"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic1" translatesAutoresizingMaskIntoConstraints="NO" id="kNp-jU-Gza">
+                                <rect key="frame" x="0.0" y="0.0" width="272" height="164"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z84-3d-ldD">
+                                <rect key="frame" x="110" y="52.5" width="52.5" height="59.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="49"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="labelColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="kNp-jU-Gza" secondAttribute="bottom" id="JgA-NR-Sdt"/>
+                            <constraint firstItem="z84-3d-ldD" firstAttribute="centerX" secondItem="EPn-pe-EMC" secondAttribute="centerX" id="Joc-1n-5Dk"/>
+                            <constraint firstItem="z84-3d-ldD" firstAttribute="centerY" secondItem="EPn-pe-EMC" secondAttribute="centerY" id="Wjl-eg-z9X"/>
+                            <constraint firstItem="kNp-jU-Gza" firstAttribute="leading" secondItem="EPn-pe-EMC" secondAttribute="leading" id="iEV-qD-ZDA"/>
+                            <constraint firstItem="kNp-jU-Gza" firstAttribute="top" secondItem="EPn-pe-EMC" secondAttribute="top" id="lGe-b9-7k7"/>
+                            <constraint firstAttribute="trailing" secondItem="kNp-jU-Gza" secondAttribute="trailing" id="uat-rC-KKR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="EPn-pe-EMC" firstAttribute="leading" secondItem="G0k-qu-tIj" secondAttribute="leading" id="BJd-rZ-JL3"/>
+                    <constraint firstItem="EPn-pe-EMC" firstAttribute="top" secondItem="G0k-qu-tIj" secondAttribute="top" id="Kcw-Mm-svM"/>
+                    <constraint firstAttribute="bottom" secondItem="EPn-pe-EMC" secondAttribute="bottom" id="di6-GT-M0b"/>
+                    <constraint firstAttribute="trailing" secondItem="EPn-pe-EMC" secondAttribute="trailing" id="fAc-ls-UFV"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="272" height="164"/>
+            <connections>
+                <outlet property="imageView" destination="kNp-jU-Gza" id="fd6-Dp-FBM"/>
+                <outlet property="titleLabel" destination="z84-3d-ldD" id="yiS-FP-jwx"/>
+            </connections>
+            <point key="canvasLocation" x="506" y="82"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="pic1" width="540" height="540"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

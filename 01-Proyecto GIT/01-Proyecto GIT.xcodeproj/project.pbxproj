@@ -14,6 +14,8 @@
 		08684BE72546CD8100633ECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08684BE62546CD8100633ECB /* Assets.xcassets */; };
 		08684BEA2546CD8100633ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08684BE82546CD8100633ECB /* LaunchScreen.storyboard */; };
 		08684BF7254709F700633ECB /* picturesviewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08684BF6254709F700633ECB /* picturesviewcontroller.swift */; };
+		0879E1BC2548170400A7A3EB /* PicturesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0879E1BB2548170400A7A3EB /* PicturesCell.xib */; };
+		0879E1BF25481C0D00A7A3EB /* PicturesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879E1BE25481C0D00A7A3EB /* PicturesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		08684BE92546CD8100633ECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08684BEB2546CD8100633ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08684BF6254709F700633ECB /* picturesviewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = picturesviewcontroller.swift; sourceTree = "<group>"; };
+		0879E1BB2548170400A7A3EB /* PicturesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicturesCell.xib; sourceTree = "<group>"; };
+		0879E1BE25481C0D00A7A3EB /* PicturesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				08684BF6254709F700633ECB /* picturesviewcontroller.swift */,
+				0879E1BB2548170400A7A3EB /* PicturesCell.xib */,
+				0879E1BE25481C0D00A7A3EB /* PicturesCell.swift */,
 			);
 			path = Pictures;
 			sourceTree = "<group>";
@@ -143,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0879E1BC2548170400A7A3EB /* PicturesCell.xib in Resources */,
 				08684BEA2546CD8100633ECB /* LaunchScreen.storyboard in Resources */,
 				08684BE72546CD8100633ECB /* Assets.xcassets in Resources */,
 				08684BE52546CD8000633ECB /* Main.storyboard in Resources */,
@@ -159,6 +166,7 @@
 				08684BE22546CD8000633ECB /* ViewController.swift in Sources */,
 				08684BF7254709F700633ECB /* picturesviewcontroller.swift in Sources */,
 				08684BDE2546CD8000633ECB /* AppDelegate.swift in Sources */,
+				0879E1BF25481C0D00A7A3EB /* PicturesCell.swift in Sources */,
 				08684BE02546CD8000633ECB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

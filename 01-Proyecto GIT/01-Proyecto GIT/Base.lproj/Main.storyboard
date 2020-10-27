@@ -70,7 +70,7 @@
         <scene sceneID="6rQ-oK-bFK">
             <objects>
                 <viewController id="3VV-Sq-0ed" customClass="PictureViewController" customModule="_1_Proyecto_GIT" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hfJ-6d-f6t">
+                    <view key="view" contentMode="scaleAspectFill" id="hfJ-6d-f6t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -110,7 +110,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Photo" image="photo" catalog="system" selectedImage="photo.on.rectangle" id="ked-xo-WO9" userLabel="Photo"/>
                     <connections>
-                        <outlet property="PhotoViewController" destination="Hmv-OC-5tn" id="23f-Zl-NBF"/>
+                        <outlet property="collectionView" destination="Hmv-OC-5tn" id="23f-Zl-NBF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFw-Cn-6Pf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
