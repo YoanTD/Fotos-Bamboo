@@ -12,7 +12,7 @@ import UIKit
 
 
 class PicturesCell : UICollectionViewCell {
-    let name : String = ""
+    
     
     
     @IBOutlet weak var imageView: UIImageView!

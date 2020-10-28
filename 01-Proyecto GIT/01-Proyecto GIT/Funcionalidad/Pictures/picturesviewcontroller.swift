@@ -27,21 +27,28 @@ class PictureViewController : UIViewController {
 
 
 extension PictureViewController: UICollectionViewDataSource {
-   
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
+        return 100
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         cell.backgroundColor = .yellow
+        if let pictureCell = (cell as? PicturesCell) {
+        print(pictureCell.titleLabel.text)
+            pictureCell.titleLabel.text = "\(indexPath.row)"
+            pictureCell.imageView.image = UIImage(named:"pic2")
+    }
         return cell
     }
+    
+    
     
 }
 
