@@ -10,14 +10,65 @@ import UIKit
 
 
 
+
+
+
 class PictureViewController : UIViewController {
     let maxHorizontalCells : CGFloat = 10
     let marginBetwenCells : CGFloat = 10
     let reuseIdentifier = String(describing: PicturesCell.self)
     
+    @IBAction func yearsBut(_ sender: UIButton) {
+        print("hola")
+        selecBut(sender)
+        
+    }
+    
+    @IBAction func monthBut(_ sender: UIButton) {
+        print("qlq")
+        selecBut(sender)
+        
+    }
+    
+    @IBAction func daysBut(_ sender: UIButton) {
+        print("ya tu chave")
+        selecBut(sender)
+        
+        
+    }
+    
+    @IBAction func allPhotosBut(_ sender: UIButton) {
+        print("Bambo the best")
+        selecBut(sender)
+        
+    }
+    
+    func selecBut(_ sender : UIButton) {
+        allPhotosSelec.isSelected = false
+        daysSelec.isSelected = false
+        monthSelec.isSelected = false
+        yearSelec.isSelected = false
+        sender.isSelected = true
+        
+        
+    }
+     
+    
+    @IBOutlet weak var stackViewOut: UIStackView!
+    
+    
+    @IBOutlet weak var yearSelec: UIButton!
+    
+    @IBOutlet weak var monthSelec: UIButton!
+    
+    @IBOutlet weak var daysSelec: UIButton!
+    
+    @IBOutlet weak var allPhotosSelec: UIButton!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
+        stackViewOut.layer.cornerRadius = 25
         let nib = UINib(nibName: reuseIdentifier, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
         super.viewDidLoad()
@@ -49,7 +100,7 @@ extension PictureViewController: UICollectionViewDataSource {
             } else {
                 pictureCell.imageView.image = UIImage(named:"pic2")
                 
-//                pictureCell.previewImage.image = indexPath.row % 2 == 0 ? UIImage(named: "pic1") : UIImage(named: "pic2")
+                //                pictureCell.previewImage.image = indexPath.row % 2 == 0 ? UIImage(named: "pic1") : UIImage(named: "pic2")
                 
             }
             

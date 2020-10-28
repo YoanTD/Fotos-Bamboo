@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -88,34 +89,52 @@
                                     <outlet property="delegate" destination="3VV-Sq-0ed" id="xbJ-hS-skP"/>
                                 </connections>
                             </collectionView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Dcx-or-4cr">
+                            <stackView opaque="NO" multipleTouchEnabled="YES" alpha="0.75" contentMode="scaleToFill" distribution="fillProportionally" spacing="12" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dcx-or-4cr">
                                 <rect key="frame" x="0.0" y="753" width="414" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LjS-tn-qNF">
-                                        <rect key="frame" x="0.0" y="0.0" width="92.5" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="74" height="60"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Months"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <state key="normal" title="Years"/>
+                                        <state key="selected">
+                                            <color key="titleShadowColor" name="AccentColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="yearsBut:" destination="3VV-Sq-0ed" eventType="touchUpInside" id="auC-Lf-sYD"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Plo-fE-3IH">
-                                        <rect key="frame" x="112.5" y="0.0" width="67" height="60"/>
+                                        <rect key="frame" x="86" y="0.0" width="88.5" height="60"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Years"/>
+                                        <state key="normal" title="Month"/>
+                                        <connections>
+                                            <action selector="monthBut:" destination="3VV-Sq-0ed" eventType="touchUpInside" id="laN-YA-QYc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cId-Sj-58K">
-                                        <rect key="frame" x="199.5" y="0.0" width="122" height="60"/>
-                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="All Photos"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwF-Yf-oYv">
-                                        <rect key="frame" x="341.5" y="0.0" width="72.5" height="60"/>
+                                        <rect key="frame" x="186.5" y="0.0" width="69" height="60"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Days"/>
+                                        <connections>
+                                            <action selector="daysBut:" destination="3VV-Sq-0ed" eventType="touchUpInside" id="k0a-4D-mBc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwF-Yf-oYv">
+                                        <rect key="frame" x="267.5" y="0.0" width="146.5" height="60"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="All Photos"/>
+                                        <connections>
+                                            <action selector="allPhotosBut:" destination="3VV-Sq-0ed" eventType="touchUpInside" id="tkF-5v-g6w"/>
+                                        </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="4lH-1t-qtw"/>
                                 </constraints>
@@ -137,7 +156,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Photo" image="photo" catalog="system" selectedImage="photo.on.rectangle" id="ked-xo-WO9" userLabel="Photo"/>
                     <connections>
+                        <outlet property="allPhotosSelec" destination="iwF-Yf-oYv" id="Fca-NM-cd6"/>
                         <outlet property="collectionView" destination="Hmv-OC-5tn" id="23f-Zl-NBF"/>
+                        <outlet property="daysSelec" destination="cId-Sj-58K" id="2CO-dX-4ND"/>
+                        <outlet property="monthSelec" destination="Plo-fE-3IH" id="akq-B5-tHL"/>
+                        <outlet property="stackViewOut" destination="Dcx-or-4cr" id="41o-C7-BC3"/>
+                        <outlet property="yearSelec" destination="LjS-tn-qNF" id="3P5-hz-97G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFw-Cn-6Pf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -168,8 +192,14 @@
         <image name="photo.fill.on.rectangle.fill" catalog="system" width="128" height="96"/>
         <image name="photo.on.rectangle" catalog="system" width="128" height="96"/>
         <image name="photo.on.rectangle.fill" catalog="system" width="128" height="96"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
