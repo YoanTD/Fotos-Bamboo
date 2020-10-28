@@ -41,10 +41,20 @@ extension PictureViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         cell.backgroundColor = .yellow
         if let pictureCell = (cell as? PicturesCell) {
-        print(pictureCell.titleLabel.text)
+            print(pictureCell.titleLabel.text)
             pictureCell.titleLabel.text = "\(indexPath.row)"
             pictureCell.imageView.image = UIImage(named:"pic2")
-    }
+            if indexPath.row % 2 == 0 {
+                pictureCell.imageView.image = UIImage(named:"pic1")
+            } else {
+                pictureCell.imageView.image = UIImage(named:"pic2")
+                
+//                pictureCell.previewImage.image = indexPath.row % 2 == 0 ? UIImage(named: "pic1") : UIImage(named: "pic2")
+                
+            }
+            
+            
+        }
         return cell
     }
     
@@ -61,7 +71,7 @@ extension PictureViewController: UICollectionViewDelegate {
 
 extension PictureViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 180, height: 180) // Sirve pa ajustar las medidas de los cuadrados.
+        return CGSize(width: 100, height: 100) // Sirve pa ajustar las medidas de los cuadrados.
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return marginBetwenCells
