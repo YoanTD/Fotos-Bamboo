@@ -90,13 +90,14 @@
                                 </connections>
                             </collectionView>
                             <stackView opaque="NO" multipleTouchEnabled="YES" alpha="0.75" contentMode="scaleToFill" distribution="fillProportionally" spacing="12" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dcx-or-4cr">
-                                <rect key="frame" x="0.0" y="753" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="772" width="414" height="41"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LjS-tn-qNF">
-                                        <rect key="frame" x="0.0" y="0.0" width="74" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="74" height="41"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
-                                        <color key="tintColor" name="AccentColor"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Years"/>
                                         <state key="selected">
                                             <color key="titleShadowColor" name="AccentColor"/>
@@ -106,27 +107,33 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Plo-fE-3IH">
-                                        <rect key="frame" x="86" y="0.0" width="88.5" height="60"/>
+                                        <rect key="frame" x="86" y="0.0" width="88.5" height="41"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Month"/>
                                         <connections>
                                             <action selector="monthBut:" destination="3VV-Sq-0ed" eventType="touchUpInside" id="laN-YA-QYc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cId-Sj-58K">
-                                        <rect key="frame" x="186.5" y="0.0" width="69" height="60"/>
+                                        <rect key="frame" x="186.5" y="0.0" width="69" height="41"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Days"/>
                                         <connections>
                                             <action selector="daysBut:" destination="3VV-Sq-0ed" eventType="touchUpInside" id="k0a-4D-mBc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwF-Yf-oYv">
-                                        <rect key="frame" x="267.5" y="0.0" width="146.5" height="60"/>
+                                        <rect key="frame" x="267.5" y="0.0" width="146.5" height="41"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="All Photos"/>
                                         <connections>
                                             <action selector="allPhotosBut:" destination="3VV-Sq-0ed" eventType="touchUpInside" id="tkF-5v-g6w"/>
@@ -135,9 +142,6 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="4lH-1t-qtw"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jHn-Rk-y5h"/>
@@ -195,6 +199,12 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -17,29 +17,40 @@ class PictureViewController : UIViewController {
     let maxHorizontalCells : CGFloat = 10
     let marginBetwenCells : CGFloat = 10
     let reuseIdentifier = String(describing: PicturesCell.self)
+    var cellWidth : CGFloat = 75
+    var cellHeight: CGFloat = 75
     
     @IBAction func yearsBut(_ sender: UIButton) {
         print("hola")
         selecBut(sender)
-        
+        cellWidth = 150
+        cellHeight = 150
+        collectionView.reloadData()
     }
     
     @IBAction func monthBut(_ sender: UIButton) {
         print("qlq")
         selecBut(sender)
-        
+        cellWidth = 25
+        cellHeight = 25
+        collectionView.reloadData()
     }
     
     @IBAction func daysBut(_ sender: UIButton) {
         print("ya tu chave")
         selecBut(sender)
-        
+        cellWidth = 30
+        cellHeight = 30
+        collectionView.reloadData()
         
     }
     
     @IBAction func allPhotosBut(_ sender: UIButton) {
         print("Bambo the best")
         selecBut(sender)
+        cellWidth = 60
+        cellHeight = 60
+        collectionView.reloadData()
         
     }
     
@@ -100,7 +111,7 @@ extension PictureViewController: UICollectionViewDataSource {
             } else {
                 pictureCell.imageView.image = UIImage(named:"pic2")
                 
-                //                pictureCell.previewImage.image = indexPath.row % 2 == 0 ? UIImage(named: "pic1") : UIImage(named: "pic2")
+    // pictureCell.previewImage.image = indexPath.row % 2 == 0 ? UIImage(named: "pic1") : UIImage(named: "pic2")
                 
             }
             
@@ -122,7 +133,7 @@ extension PictureViewController: UICollectionViewDelegate {
 
 extension PictureViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 100) // Sirve pa ajustar las medidas de los cuadrados.
+        return CGSize(width: cellWidth, height: cellHeight) // Sirve pa ajustar las medidas de los cuadrados.
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return marginBetwenCells
