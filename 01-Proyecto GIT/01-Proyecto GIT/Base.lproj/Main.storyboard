@@ -88,6 +88,38 @@
                                     <outlet property="delegate" destination="3VV-Sq-0ed" id="xbJ-hS-skP"/>
                                 </connections>
                             </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Dcx-or-4cr">
+                                <rect key="frame" x="0.0" y="753" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LjS-tn-qNF">
+                                        <rect key="frame" x="0.0" y="0.0" width="92.5" height="60"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Months"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Plo-fE-3IH">
+                                        <rect key="frame" x="112.5" y="0.0" width="67" height="60"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Years"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cId-Sj-58K">
+                                        <rect key="frame" x="199.5" y="0.0" width="122" height="60"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="All Photos"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwF-Yf-oYv">
+                                        <rect key="frame" x="341.5" y="0.0" width="72.5" height="60"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Days"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4lH-1t-qtw"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jHn-Rk-y5h"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -95,7 +127,12 @@
                             <constraint firstItem="Hmv-OC-5tn" firstAttribute="leading" secondItem="jHn-Rk-y5h" secondAttribute="leading" id="KTB-Cz-bgP"/>
                             <constraint firstItem="jHn-Rk-y5h" firstAttribute="bottom" secondItem="Hmv-OC-5tn" secondAttribute="bottom" id="Paz-OS-CsJ"/>
                             <constraint firstItem="jHn-Rk-y5h" firstAttribute="trailing" secondItem="Hmv-OC-5tn" secondAttribute="trailing" id="V6E-sk-kp3"/>
+                            <constraint firstItem="Dcx-or-4cr" firstAttribute="trailing" secondItem="jHn-Rk-y5h" secondAttribute="trailing" id="Xls-F8-BVC"/>
+                            <constraint firstItem="jHn-Rk-y5h" firstAttribute="bottom" secondItem="Dcx-or-4cr" secondAttribute="bottom" id="gS6-D1-JE5"/>
+                            <constraint firstItem="jHn-Rk-y5h" firstAttribute="trailing" secondItem="Dcx-or-4cr" secondAttribute="trailing" id="h5k-pb-e8Q"/>
                             <constraint firstItem="Hmv-OC-5tn" firstAttribute="top" secondItem="jHn-Rk-y5h" secondAttribute="top" id="nxj-bc-O7K"/>
+                            <constraint firstItem="Dcx-or-4cr" firstAttribute="leading" secondItem="jHn-Rk-y5h" secondAttribute="leading" id="p7i-O3-3Ww"/>
+                            <constraint firstItem="Dcx-or-4cr" firstAttribute="leading" secondItem="jHn-Rk-y5h" secondAttribute="leading" id="tAq-go-npb"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Photo" image="photo" catalog="system" selectedImage="photo.on.rectangle" id="ked-xo-WO9" userLabel="Photo"/>
