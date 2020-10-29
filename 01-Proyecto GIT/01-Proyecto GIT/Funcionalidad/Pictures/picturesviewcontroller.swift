@@ -63,7 +63,7 @@ class PictureViewController : UIViewController {
         
         
     }
-     
+    
     
     @IBOutlet weak var stackViewOut: UIStackView!
     
@@ -83,6 +83,22 @@ class PictureViewController : UIViewController {
         let nib = UINib(nibName: reuseIdentifier, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
         super.viewDidLoad()
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        if UIDevice.current.orientation.isLandscape {
+            print("Landscape")
+            if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+                layout.scrollDirection = .horizontal
+            }
+        } else if UIDevice.current.orientation.isPortrait {
+            print("Portait")
+            if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+                layout.scrollDirection = .vertical
+                
+            }
+        }
     }
 }
 
@@ -111,7 +127,7 @@ extension PictureViewController: UICollectionViewDataSource {
             } else {
                 pictureCell.imageView.image = UIImage(named:"pic2")
                 
-    // pictureCell.previewImage.image = indexPath.row % 2 == 0 ? UIImage(named: "pic1") : UIImage(named: "pic2")
+                // pictureCell.previewImage.image = indexPath.row % 2 == 0 ? UIImage(named: "pic1") : UIImage(named: "pic2")
                 
             }
             
@@ -119,9 +135,6 @@ extension PictureViewController: UICollectionViewDataSource {
         }
         return cell
     }
-    
-    
-    
 }
 
 extension PictureViewController: UICollectionViewDelegate {
@@ -144,5 +157,3 @@ extension PictureViewController: UICollectionViewDelegateFlowLayout {
     }
     
 }
-
-
