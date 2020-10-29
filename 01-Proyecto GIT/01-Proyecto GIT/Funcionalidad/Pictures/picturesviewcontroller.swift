@@ -98,10 +98,12 @@ class PictureViewController : UIViewController {
                 layout.scrollDirection = .vertical
                 
             }
+            
         }
     }
 }
 
+ //guard let name9: Bool = name2 else { print("Adios")}
 
 
 extension PictureViewController: UICollectionViewDataSource {
