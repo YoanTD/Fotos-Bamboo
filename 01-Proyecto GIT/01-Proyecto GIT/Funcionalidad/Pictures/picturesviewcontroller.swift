@@ -114,7 +114,7 @@ extension PictureViewController: UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return ImagesData.numOfImages()
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -123,13 +123,13 @@ extension PictureViewController: UICollectionViewDataSource {
         if let pictureCell = (cell as? PicturesCell) {
             print(pictureCell.titleLabel.text)
             pictureCell.titleLabel.text = "\(indexPath.row)"
-            pictureCell.imageView.image = UIImage(named:"pic2")
+//            pictureCell.imageView.image = UIImage(named:"pic2")
             if indexPath.row % 2 == 0 {
-                pictureCell.imageView.image = UIImage(named:"pic1")
+                pictureCell.imageView.image = ImagesData.imageForPosition(indexPath.row)
+                print(indexPath.row)
             } else {
-                pictureCell.imageView.image = UIImage(named:"pic2")
-                
-                // pictureCell.previewImage.image = indexPath.row % 2 == 0 ? UIImage(named: "pic1") : UIImage(named: "pic2")
+//                pictureCell.imageView.image = UIImage(named:"pic2")
+            
                 
             }
             
