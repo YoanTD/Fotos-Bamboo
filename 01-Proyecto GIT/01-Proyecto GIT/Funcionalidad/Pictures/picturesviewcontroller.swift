@@ -128,14 +128,14 @@ extension PictureViewController: UICollectionViewDataSource {
             print(pictureCell.titleLabel.text)
             pictureCell.titleLabel.text = "\(indexPath.row)"
             //            pictureCell.imageView.image = UIImage(named:"pic2")
-//            if indexPath.row % 2 == 0 {
-//                pictureCell.imageView.image = ImagesData.imageForPosition(indexPath.row)
-//                print(indexPath.row)
-//            } else {
-//                //                pictureCell.imageView.image = UIImage(named:"pic2")
-//
-//
-//            }
+            //            if indexPath.row % 2 == 0 {
+            //                pictureCell.imageView.image = ImagesData.imageForPosition(indexPath.row)
+            //                print(indexPath.row)
+            //            } else {
+            //                //                pictureCell.imageView.image = UIImage(named:"pic2")
+            //
+            //
+            //            }
             pictureCell.imageView.image = ImagesData.imageForPosition(indexPath.row)
             print(indexPath.row)
             
