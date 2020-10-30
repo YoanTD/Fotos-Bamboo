@@ -49,7 +49,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="H47-5v-Pmr">
             <objects>
-                <tabBarController id="RN3-Wr-L4v" sceneMemberID="viewController">
+                <tabBarController extendedLayoutIncludesOpaqueBars="YES" id="RN3-Wr-L4v" sceneMemberID="viewController">
                     <tabBar key="tabBar" tag="1" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fUj-lf-38D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

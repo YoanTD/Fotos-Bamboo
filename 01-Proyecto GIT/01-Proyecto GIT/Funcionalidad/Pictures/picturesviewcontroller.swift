@@ -14,18 +14,22 @@ import UIKit
 
 
 class PictureViewController : UIViewController {
-    let maxHorizontalCells : CGFloat = 10
-    let marginBetwenCells : CGFloat = 10
+    //    let maxHorizontalCells : CGFloat = 10
+    let marginBetwenCells : CGFloat = 5
     let reuseIdentifier = String(describing: PicturesCell.self)
     var cellWidth : CGFloat = 75
     var cellHeight: CGFloat = 75
+    var numOfHorizontalCells: CGFloat = 2
     
     @IBAction func yearsBut(_ sender: UIButton) {
         print("hola")
         selecBut(sender)
-        cellWidth = 150
-        cellHeight = 150
+        //        cellWidth = 150
+        //        cellHeight = 150
+        numOfHorizontalCells = 1
         collectionView.reloadData()
+        
+        
     }
     
     @IBAction func monthBut(_ sender: UIButton) {
@@ -33,6 +37,7 @@ class PictureViewController : UIViewController {
         selecBut(sender)
         cellWidth = 25
         cellHeight = 25
+        numOfHorizontalCells = 3
         collectionView.reloadData()
     }
     
@@ -41,6 +46,7 @@ class PictureViewController : UIViewController {
         selecBut(sender)
         cellWidth = 30
         cellHeight = 30
+        numOfHorizontalCells = 5
         collectionView.reloadData()
         
     }
@@ -50,6 +56,7 @@ class PictureViewController : UIViewController {
         selecBut(sender)
         cellWidth = 60
         cellHeight = 60
+        numOfHorizontalCells = 7
         collectionView.reloadData()
         
     }
@@ -103,7 +110,7 @@ class PictureViewController : UIViewController {
     }
 }
 
- //guard let name9: Bool = name2 else { print("Adios")}
+//guard let name9: Bool = name2 else { print("Adios")}
 
 
 extension PictureViewController: UICollectionViewDataSource {
@@ -123,13 +130,13 @@ extension PictureViewController: UICollectionViewDataSource {
         if let pictureCell = (cell as? PicturesCell) {
             print(pictureCell.titleLabel.text)
             pictureCell.titleLabel.text = "\(indexPath.row)"
-//            pictureCell.imageView.image = UIImage(named:"pic2")
+            //            pictureCell.imageView.image = UIImage(named:"pic2")
             if indexPath.row % 2 == 0 {
                 pictureCell.imageView.image = ImagesData.imageForPosition(indexPath.row)
                 print(indexPath.row)
             } else {
-//                pictureCell.imageView.image = UIImage(named:"pic2")
-            
+                //                pictureCell.imageView.image = UIImage(named:"pic2")
+                
                 
             }
             
@@ -148,7 +155,8 @@ extension PictureViewController: UICollectionViewDelegate {
 
 extension PictureViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: cellWidth, height: cellHeight) // Sirve pa ajustar las medidas de los cuadrados.
+        let cellWidth = (collectionView.frame.size.width - (numOfHorizontalCells-1)*marginBetwenCells) / numOfHorizontalCells
+        return CGSize(width: cellWidth, height: cellWidth) // Sirve pa ajustar las medidas de los cuadrados.
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return marginBetwenCells

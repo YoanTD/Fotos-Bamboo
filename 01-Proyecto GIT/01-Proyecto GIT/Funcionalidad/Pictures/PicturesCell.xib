@@ -20,11 +20,11 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPn-pe-EMC">
                         <rect key="frame" x="0.0" y="0.0" width="272" height="164"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic1" translatesAutoresizingMaskIntoConstraints="NO" id="kNp-jU-Gza">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic1" translatesAutoresizingMaskIntoConstraints="NO" id="kNp-jU-Gza">
                                 <rect key="frame" x="0.0" y="0.0" width="272" height="164"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z84-3d-ldD">
-                                <rect key="frame" x="110" y="52.5" width="52.5" height="59.5"/>
+                                <rect key="frame" x="219.5" y="104.5" width="52.5" height="59.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="49"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,9 +33,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="z84-3d-ldD" secondAttribute="bottom" id="J1B-KD-nIe"/>
                             <constraint firstAttribute="bottom" secondItem="kNp-jU-Gza" secondAttribute="bottom" id="JgA-NR-Sdt"/>
-                            <constraint firstItem="z84-3d-ldD" firstAttribute="centerX" secondItem="EPn-pe-EMC" secondAttribute="centerX" id="Joc-1n-5Dk"/>
-                            <constraint firstItem="z84-3d-ldD" firstAttribute="centerY" secondItem="EPn-pe-EMC" secondAttribute="centerY" id="Wjl-eg-z9X"/>
+                            <constraint firstAttribute="trailing" secondItem="z84-3d-ldD" secondAttribute="trailing" id="RRS-Ed-rqR"/>
                             <constraint firstItem="kNp-jU-Gza" firstAttribute="leading" secondItem="EPn-pe-EMC" secondAttribute="leading" id="iEV-qD-ZDA"/>
                             <constraint firstItem="kNp-jU-Gza" firstAttribute="top" secondItem="EPn-pe-EMC" secondAttribute="top" id="lGe-b9-7k7"/>
                             <constraint firstAttribute="trailing" secondItem="kNp-jU-Gza" secondAttribute="trailing" id="uat-rC-KKR"/>
