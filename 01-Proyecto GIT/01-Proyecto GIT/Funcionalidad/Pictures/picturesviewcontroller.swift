@@ -110,9 +110,6 @@ class PictureViewController : UIViewController {
     }
 }
 
-//guard let name9: Bool = name2 else { print("Adios")}
-
-
 extension PictureViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -131,15 +128,16 @@ extension PictureViewController: UICollectionViewDataSource {
             print(pictureCell.titleLabel.text)
             pictureCell.titleLabel.text = "\(indexPath.row)"
             //            pictureCell.imageView.image = UIImage(named:"pic2")
-            if indexPath.row % 2 == 0 {
-                pictureCell.imageView.image = ImagesData.imageForPosition(indexPath.row)
-                print(indexPath.row)
-            } else {
-                //                pictureCell.imageView.image = UIImage(named:"pic2")
-                
-                
-            }
-            
+//            if indexPath.row % 2 == 0 {
+//                pictureCell.imageView.image = ImagesData.imageForPosition(indexPath.row)
+//                print(indexPath.row)
+//            } else {
+//                //                pictureCell.imageView.image = UIImage(named:"pic2")
+//
+//
+//            }
+            pictureCell.imageView.image = ImagesData.imageForPosition(indexPath.row)
+            print(indexPath.row)
             
         }
         return cell
@@ -149,6 +147,8 @@ extension PictureViewController: UICollectionViewDataSource {
 extension PictureViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print (indexPath.row)
+        PicturesViewModel.selectedImage = ImagesData.imageForPosition(indexPath.row)
+        performSegue(withIdentifier: "segueToDetail", sender: nil)
         
     }
 }

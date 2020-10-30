@@ -166,11 +166,41 @@
                         <outlet property="monthSelec" destination="Plo-fE-3IH" id="akq-B5-tHL"/>
                         <outlet property="stackViewOut" destination="Dcx-or-4cr" id="41o-C7-BC3"/>
                         <outlet property="yearSelec" destination="LjS-tn-qNF" id="3P5-hz-97G"/>
+                        <segue destination="SKu-N9-CFW" kind="presentation" identifier="segueToDetail" id="zSo-Ab-kbo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFw-Cn-6Pf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1919" y="725"/>
+        </scene>
+        <!--Picture Full Screen View Controller-->
+        <scene sceneID="fBR-Qg-J8N">
+            <objects>
+                <viewController id="SKu-N9-CFW" customClass="PictureFullScreenViewController" customModule="_1_Proyecto_GIT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nD0-1s-yr9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dur-tr-pGX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bof-ab-aGx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bof-ab-aGx" firstAttribute="trailing" secondItem="dur-tr-pGX" secondAttribute="trailing" id="EaX-0L-x0R"/>
+                            <constraint firstItem="dur-tr-pGX" firstAttribute="top" secondItem="Bof-ab-aGx" secondAttribute="top" id="XFS-A4-dbH"/>
+                            <constraint firstItem="dur-tr-pGX" firstAttribute="leading" secondItem="Bof-ab-aGx" secondAttribute="leading" id="Zjo-2t-jN7"/>
+                            <constraint firstItem="Bof-ab-aGx" firstAttribute="bottom" secondItem="dur-tr-pGX" secondAttribute="bottom" id="b8J-FK-Cgu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="dur-tr-pGX" id="6Ab-44-Rrn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NSY-Lt-aEB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1920" y="1551"/>
         </scene>
         <!--For You-->
         <scene sceneID="9kc-pP-www">

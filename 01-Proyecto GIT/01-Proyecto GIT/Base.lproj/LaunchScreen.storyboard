@@ -35,7 +35,7 @@
                                             <constraint firstAttribute="height" constant="200" id="Ucy-Wb-Xnj"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="masons-2022392_1280" translatesAutoresizingMaskIntoConstraints="NO" id="bWw-Aw-KTc">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="masons-2022392_1280" translatesAutoresizingMaskIntoConstraints="NO" id="bWw-Aw-KTc">
                                         <rect key="frame" x="0.0" y="200" width="414" height="618"/>
                                     </imageView>
                                 </subviews>
