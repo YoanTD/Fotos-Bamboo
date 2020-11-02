@@ -15,7 +15,8 @@ class RandomPictureViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(refreshPicture) , userInfo: nil, repeats: true)
+        
+        //        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(refreshPicture) , userInfo: nil, repeats: true)
         
         
         
@@ -25,7 +26,11 @@ class RandomPictureViewController: UIViewController {
         
         
         //        Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true, block: { _ in self.refreshPicture()})
+       
+        
         refreshPicture()
+        
+        
         //        selector, siempre se tiene que construir el @obj.
         
         
@@ -34,6 +39,17 @@ class RandomPictureViewController: UIViewController {
         //        imageView.image = img
         //        print("random number : \(randomNumber)")
         //
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("hola estoy en el did")
+        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(refreshPicture) , userInfo: nil, repeats: true)
+        
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("hola esto en el dis")
+        timer.invalidate()
     }
     
     func getRandomPicture() -> UIImage? {
@@ -46,7 +62,7 @@ class RandomPictureViewController: UIViewController {
     @objc func refreshPicture() {
         UIView.transition(with: imageView, duration: 1.0, options: .transitionCrossDissolve, animations: {
             self.imageView.image = self.getRandomPicture()
-        }, completion: nil)
+    }, completion: nil)
         
     }
     
