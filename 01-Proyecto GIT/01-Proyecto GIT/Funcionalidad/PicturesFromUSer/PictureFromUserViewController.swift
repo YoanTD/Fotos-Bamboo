@@ -7,32 +7,49 @@
 
 import Foundation
 import UIKit
+import Photos
 
-
-class PictureFromUserViewController: UIViewController {
+class PictureFromUserViewController: UIViewController ,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    var imagePicker: UIImagePickerController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageView.image = #imageLiteral(resourceName: "gLAR8V6H_SU.jpg")
         
     }
     
     @IBAction func eligeFotoAction(_ sender: Any) {
-        print("hola")
-    }
-    
-    
-    
-    
-    
-    
-    
+        
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+            imagePicker.delegate = self
+            imagePicker.sourceType = .savedPhotosAlbum
+            imagePicker.allowsEditing = false
+            
+            present(imagePicker, animated: true, completion: nil)
+        }
         
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let temImage: UIImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        imageView.image = temImage
+        dismiss(animated: true, completion: nil)
+        
+        print("imagepick")
+    }
     
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: false, completion: nil)
+        
+        print("cancel")
+        
+    }
+    
+}
+
+
 
 
