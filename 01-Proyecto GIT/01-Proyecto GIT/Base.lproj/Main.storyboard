@@ -13,21 +13,49 @@
         <!--Albums-->
         <scene sceneID="H8m-f5-IMa">
             <objects>
-                <viewController id="DEm-fA-TwR" sceneMemberID="viewController">
+                <viewController id="DEm-fA-TwR" customClass="PictureFromUserViewController" customModule="_1_Proyecto_GIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sR7-hG-oYy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eUG-pJ-QSm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dl-xC-jsV">
+                                <rect key="frame" x="293" y="756" width="106" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Elige Foto">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                    <color key="titleShadowColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="eligeFotoAction:" destination="DEm-fA-TwR" eventType="touchUpInside" id="7mB-Fh-kd6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zsQ-e0-fBS"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zsQ-e0-fBS" firstAttribute="trailing" secondItem="4dl-xC-jsV" secondAttribute="trailing" constant="15" id="GUH-Zb-e31"/>
+                            <constraint firstItem="eUG-pJ-QSm" firstAttribute="trailing" secondItem="zsQ-e0-fBS" secondAttribute="trailing" id="Rax-R6-8gu"/>
+                            <constraint firstItem="eUG-pJ-QSm" firstAttribute="leading" secondItem="zsQ-e0-fBS" secondAttribute="leading" id="WpR-wU-W7K"/>
+                            <constraint firstItem="eUG-pJ-QSm" firstAttribute="top" secondItem="zsQ-e0-fBS" secondAttribute="top" id="jMd-Y5-8yd"/>
+                            <constraint firstItem="zsQ-e0-fBS" firstAttribute="bottom" secondItem="4dl-xC-jsV" secondAttribute="bottom" constant="15" id="tHv-MK-ILZ"/>
+                            <constraint firstItem="zsQ-e0-fBS" firstAttribute="bottom" secondItem="eUG-pJ-QSm" secondAttribute="bottom" id="v6d-Jy-teb"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Albums" image="photo.on.rectangle.fill" catalog="system" id="5EL-6v-QsU" userLabel="Albums">
                         <imageReference key="selectedImage" image="photo.fill.on.rectangle.fill" catalog="system" symbolScale="medium"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="imageView" destination="eUG-pJ-QSm" id="nVD-qx-23D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WDL-Bv-9jb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="157" y="725"/>
+            <point key="canvasLocation" x="155.07246376811597" y="724.55357142857144"/>
         </scene>
         <!--Search-->
         <scene sceneID="xU3-Ry-31M">
