@@ -11,6 +11,23 @@ class PictureFullScreenViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     
+    
+    @IBAction func xButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        print("x")
+        
+}
+    
+    @IBOutlet weak var swOut: UISwitch!
+    
+    @IBAction func switchAction(_ sender: Any) {
+        print(swOut.isOn)
+        
+        
+    }
+    
+    
+    
     override func viewDidLoad() {
         imageView.image = PicturesViewModel.selectedImage
         super.viewDidLoad()
