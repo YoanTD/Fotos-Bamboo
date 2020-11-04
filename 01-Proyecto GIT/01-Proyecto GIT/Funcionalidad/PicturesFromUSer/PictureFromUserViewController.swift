@@ -25,7 +25,7 @@ class PictureFromUserViewController: UIViewController ,UINavigationControllerDel
         
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
             imagePicker.delegate = self
-            imagePicker.sourceType = .savedPhotosAlbum
+            imagePicker.sourceType = .photoLibrary
             imagePicker.allowsEditing = false
             
             present(imagePicker, animated: true, completion: nil)

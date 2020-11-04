@@ -10,6 +10,8 @@ import UIKit
 
 class PicturesViewModel {
     static var selectedImage: UIImage?
+    static var selectedIdex: Int?
+    
     
 }
 

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eUG-pJ-QSm">
-                                <rect key="frame" x="0.0" y="44" width="0.0" height="1251"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dl-xC-jsV">
@@ -234,7 +234,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S6h-6h-jeW">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="S6h-6h-jeW">
                                         <rect key="frame" x="51" y="54" width="51" height="31"/>
                                         <connections>
                                             <action selector="switchAction:" destination="SKu-N9-CFW" eventType="valueChanged" id="ulX-am-JEq"/>
@@ -253,6 +253,12 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dur-tr-pGX">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u0u-FB-Qg4">
+                                <rect key="frame" x="0.0" y="20" width="356" height="34"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bof-ab-aGx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -261,15 +267,19 @@
                             <constraint firstItem="Bof-ab-aGx" firstAttribute="trailing" secondItem="55b-08-hen" secondAttribute="trailing" constant="15" id="5fZ-dY-Phk"/>
                             <constraint firstItem="Bof-ab-aGx" firstAttribute="trailing" secondItem="dur-tr-pGX" secondAttribute="trailing" id="EaX-0L-x0R"/>
                             <constraint firstItem="55b-08-hen" firstAttribute="top" secondItem="Bof-ab-aGx" secondAttribute="top" constant="15" id="TS0-Ij-ZHb"/>
+                            <constraint firstItem="u0u-FB-Qg4" firstAttribute="top" secondItem="Bof-ab-aGx" secondAttribute="top" constant="20" id="XBl-ww-2oa"/>
                             <constraint firstItem="dur-tr-pGX" firstAttribute="top" secondItem="Bof-ab-aGx" secondAttribute="top" id="XFS-A4-dbH"/>
                             <constraint firstItem="dur-tr-pGX" firstAttribute="leading" secondItem="Bof-ab-aGx" secondAttribute="leading" id="Zjo-2t-jN7"/>
                             <constraint firstItem="Bof-ab-aGx" firstAttribute="bottom" secondItem="dur-tr-pGX" secondAttribute="bottom" id="b8J-FK-Cgu"/>
+                            <constraint firstItem="u0u-FB-Qg4" firstAttribute="leading" secondItem="Bof-ab-aGx" secondAttribute="leading" id="hF5-sd-c5C"/>
+                            <constraint firstItem="55b-08-hen" firstAttribute="leading" secondItem="u0u-FB-Qg4" secondAttribute="trailing" constant="8" symbolic="YES" id="qTR-NH-iyW"/>
                             <constraint firstItem="Bof-ab-aGx" firstAttribute="bottom" secondItem="UHO-bs-qMq" secondAttribute="bottom" constant="15" id="swX-b8-1I0"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="dur-tr-pGX" id="6Ab-44-Rrn"/>
                         <outlet property="swOut" destination="S6h-6h-jeW" id="fx1-nr-oNZ"/>
+                        <outlet property="textFieldOut" destination="u0u-FB-Qg4" id="JwU-y8-LSp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NSY-Lt-aEB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -344,6 +354,9 @@
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

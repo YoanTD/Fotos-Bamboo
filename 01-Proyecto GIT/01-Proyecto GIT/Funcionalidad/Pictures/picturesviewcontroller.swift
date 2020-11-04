@@ -133,12 +133,15 @@ extension PictureViewController: UICollectionViewDataSource {
         }
         return cell
     }
+    
+    
 }
 
 extension PictureViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print (indexPath.row)
         PicturesViewModel.selectedImage = ImagesData.imageForPosition(indexPath.row)
+        PicturesViewModel.selectedIdex = indexPath.row 
         performSegue(withIdentifier: "segueToDetail", sender: nil)
         
     }
