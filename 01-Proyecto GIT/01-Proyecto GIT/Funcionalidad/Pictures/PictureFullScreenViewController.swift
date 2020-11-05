@@ -15,6 +15,7 @@ class PictureFullScreenViewController: UIViewController {
         textFieldOut.text = ImagesData.getTitle(PicturesViewModel.selectedIdex!)
         labelSwitch.text = "I like it! ❤️"
         print("didAppearfullscreen")
+        print("careVerga! xD!!! ")
         print(PicturesViewModel.selectedIdex)
     }
     
@@ -34,7 +35,7 @@ class PictureFullScreenViewController: UIViewController {
         
         dismiss(animated: true, completion: nil)
         print("x")
-        
+        print("careVerga! xD!!! ")
     }
     
     @IBOutlet weak var labelSwitch: UILabel!
