@@ -11,17 +11,17 @@ class EmailsViewController: UIViewController {
     
     
     @IBOutlet weak var nameOut: UITextField!
-    
-    
     @IBOutlet weak var emailOut: UITextField!
     
     private let nameEmailKey: String = "My nameKey"
     
     
     @IBAction func guardarAct(_ sender: Any) {
+        guard let name = nameOut.text,
+              let email = emailOut.text else { return }
+        let fullString: String = "\(name);\(email)"
+        UserDefaults.standard.set(fullString, forKey: nameEmailKey∫)
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
