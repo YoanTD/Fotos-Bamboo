@@ -47,7 +47,7 @@ class PictureFullScreenViewController: UIViewController {
         if swOut.isOn == true {
             ImagesData.likeImageAtPosition(PicturesViewModel.selectedIdex!)
             print("encendido")
-            print("careVerga! xD!!! ")
+            print("todo ok")
         } else {
             ImagesData.dislikeImageAtPosition(PicturesViewModel.selectedIdex!)
             print("apagado")
