@@ -94,15 +94,16 @@ class PictureViewController : UIViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
+        guard let collectionView = self.collectionView else { return }
         if UIDevice.current.orientation.isLandscape {
             print("Landscape")
-            print("careVerga! xD!!! ")
+            print("ok")
             if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
                 layout.scrollDirection = .horizontal
             }
         } else if UIDevice.current.orientation.isPortrait {
             print("Portait")
-            print("ERROR: type lkshjdl98jsh70003j-ksdbajkbh change screen to LANDSCAPE!!")
+            print("ok!")
             if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
                 layout.scrollDirection = .vertical
                 

@@ -64,15 +64,86 @@
                     <view key="view" contentMode="scaleToFill" id="Afg-xb-sJ7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RuE-zh-cSU">
+                                <rect key="frame" x="20" y="44" width="374" height="154"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nombre" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9O3-e1-6xI">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Apellido" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVZ-G1-SB3">
+                                        <rect key="frame" x="0.0" y="58" width="374" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRn-sR-CnR">
+                                        <rect key="frame" x="277" y="116" width="97" height="38"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="GUARDAR">
+                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zVZ-G1-SB3" firstAttribute="leading" secondItem="RuE-zh-cSU" secondAttribute="leading" id="XGS-KQ-uOr"/>
+                                    <constraint firstItem="9O3-e1-6xI" firstAttribute="leading" secondItem="RuE-zh-cSU" secondAttribute="leading" id="aR3-OW-nHk"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="4bW-nU-eW4">
+                                <rect key="frame" x="20" y="599" width="374" height="199"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="scaleToFill" text="HOLA" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jhe-Vs-lbk">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" image="YES" keyboardKey="YES" staticText="YES" searchField="YES" adjustable="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="buY-WE-qyC"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGP-TW-uWV">
+                                        <rect key="frame" x="0.0" y="163" width="65" height="36"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="uJs-hp-Gxv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="RESET">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jhe-Vs-lbk" secondAttribute="trailing" id="O1Y-2r-1QM"/>
+                                    <constraint firstItem="jhe-Vs-lbk" firstAttribute="leading" secondItem="4bW-nU-eW4" secondAttribute="leading" id="OcC-zh-UKv"/>
+                                    <constraint firstItem="jhe-Vs-lbk" firstAttribute="top" secondItem="4bW-nU-eW4" secondAttribute="top" id="Rsi-ZG-FwU"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="PZS-TS-wcq"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="PZS-TS-wcq" firstAttribute="trailing" secondItem="RuE-zh-cSU" secondAttribute="trailing" constant="20" id="08g-0F-T74"/>
+                            <constraint firstItem="PZS-TS-wcq" firstAttribute="trailing" secondItem="4bW-nU-eW4" secondAttribute="trailing" constant="20" id="Lpc-b0-Yba"/>
+                            <constraint firstItem="RuE-zh-cSU" firstAttribute="top" secondItem="PZS-TS-wcq" secondAttribute="top" id="QiF-MT-wEZ"/>
+                            <constraint firstItem="PZS-TS-wcq" firstAttribute="bottom" secondItem="4bW-nU-eW4" secondAttribute="bottom" constant="15" id="VmH-tk-MoZ"/>
+                            <constraint firstItem="4bW-nU-eW4" firstAttribute="leading" secondItem="PZS-TS-wcq" secondAttribute="leading" constant="20" id="dBW-Kp-x0z"/>
+                            <constraint firstItem="RuE-zh-cSU" firstAttribute="leading" secondItem="PZS-TS-wcq" secondAttribute="leading" constant="20" id="sVE-1h-UD6"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="6eG-Ol-4fh"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYb-DT-BiF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1429" y="725"/>
+            <point key="canvasLocation" x="1428.985507246377" y="724.55357142857144"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="H47-5v-Pmr">
@@ -352,6 +423,9 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
