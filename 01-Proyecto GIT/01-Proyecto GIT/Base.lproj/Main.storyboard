@@ -60,7 +60,7 @@
         <!--Search-->
         <scene sceneID="xU3-Ry-31M">
             <objects>
-                <viewController id="xY2-ZC-9ZY" sceneMemberID="viewController">
+                <viewController id="xY2-ZC-9ZY" customClass="EmailsViewController" customModule="_1_Proyecto_GIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Afg-xb-sJ7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -68,15 +68,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RuE-zh-cSU">
                                 <rect key="frame" x="20" y="44" width="374" height="154"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nombre" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9O3-e1-6xI">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NOMBRE" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="9O3-e1-6xI">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Apellido" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVZ-G1-SB3">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="zVZ-G1-SB3">
                                         <rect key="frame" x="0.0" y="58" width="374" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRn-sR-CnR">
                                         <rect key="frame" x="277" y="116" width="97" height="38"/>
@@ -85,6 +85,9 @@
                                         <state key="normal" title="GUARDAR">
                                             <color key="titleColor" systemColor="systemRedColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="guardarAct:" destination="xY2-ZC-9ZY" eventType="touchUpInside" id="AqX-SN-evT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -140,6 +143,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="6eG-Ol-4fh"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="emailOut" destination="zVZ-G1-SB3" id="6aQ-ml-cX7"/>
+                        <outlet property="nameOut" destination="9O3-e1-6xI" id="2WY-tT-FmB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYb-DT-BiF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
