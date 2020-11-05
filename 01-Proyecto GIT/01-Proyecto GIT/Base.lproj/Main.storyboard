@@ -278,6 +278,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="dur-tr-pGX" id="6Ab-44-Rrn"/>
+                        <outlet property="labelSwitch" destination="enb-oB-QcX" id="LPb-0H-y1J"/>
                         <outlet property="swOut" destination="S6h-6h-jeW" id="fx1-nr-oNZ"/>
                         <outlet property="textFieldOut" destination="u0u-FB-Qg4" id="JwU-y8-LSp"/>
                     </connections>

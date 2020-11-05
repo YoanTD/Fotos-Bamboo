@@ -13,6 +13,7 @@ class PictureFullScreenViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         textFieldOut.text = ImagesData.getTitle(PicturesViewModel.selectedIdex!)
+        labelSwitch.text = "I like it! ❤️"
         print("didAppearfullscreen")
         print(PicturesViewModel.selectedIdex)
     }
@@ -36,6 +37,8 @@ class PictureFullScreenViewController: UIViewController {
         
     }
     
+    @IBOutlet weak var labelSwitch: UILabel!
+    
     @IBOutlet weak var swOut: UISwitch!
     
     @IBAction func switchAction(_ sender: Any) {
@@ -44,6 +47,7 @@ class PictureFullScreenViewController: UIViewController {
         if swOut.isOn == true {
             ImagesData.likeImageAtPosition(PicturesViewModel.selectedIdex!)
             print("encendido")
+            print("careVerga! xD!!! ")
         } else {
             ImagesData.dislikeImageAtPosition(PicturesViewModel.selectedIdex!)
             print("apagado")
