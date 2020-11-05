@@ -102,7 +102,7 @@ class PictureViewController : UIViewController {
             }
         } else if UIDevice.current.orientation.isPortrait {
             print("Portait")
-            print("careVerga! xD!!! ")
+            print("ERROR: type lkshjdl98jsh70003j-ksdbajkbh change screen to LANDSCAPE!!")
             if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
                 layout.scrollDirection = .vertical
                 
