@@ -96,11 +96,13 @@ class PictureViewController : UIViewController {
         super.viewWillTransition(to: size, with: coordinator)
         if UIDevice.current.orientation.isLandscape {
             print("Landscape")
+            print("careVerga! xD!!! ")
             if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
                 layout.scrollDirection = .horizontal
             }
         } else if UIDevice.current.orientation.isPortrait {
             print("Portait")
+            print("careVerga! xD!!! ")
             if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
                 layout.scrollDirection = .vertical
                 
